@@ -113,9 +113,9 @@ void free_lda_suffstats(lda_model* model, lda_suffstats* ss) {
 	int num_topics = model->num_topics;
 
   free(ss->class_total);
-	for (i = 0; i < num_topics; ++i) {
-    free(ss->class_word[i]);
-  }
+	//for (i = 0; i < num_topics; ++i) {
+  //  free(ss->class_word[i]);
+  //}
   free(ss->class_word);
   free(ss);
 }
