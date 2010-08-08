@@ -288,7 +288,7 @@ void run_em(char* start, char* directory, corpus* corpus) {
 	sprintf(filename, "%s/likelihood.dat", directory);
 	FILE* likelihood_file = fopen(filename, "w");
 
-	while (((converged < 0) || (converged > EM_CONVERGED) || (i <= 2)) && (i <= EM_MAX_ITER)) {
+	while (((converged < 0) || (converged > EM_CONVERGED) || (i <= 2)) && (i < EM_MAX_ITER)) {
 		i++;
 		if (VERBOSE)
 		    printf("**** em iteration %d ****\n", i);
